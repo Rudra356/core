@@ -1,4 +1,4 @@
-package com.yoyoBankingOfDubai.rudra;
+package com.yoyoBankingOfDubai.rudra.accounts;
 
 public class Current extends Accounts {
     public Current() {
