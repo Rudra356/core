@@ -16,9 +16,15 @@ public class mainrunner {
         System.out.println(rudra.getAccountType());
         System.out.println(rudra.getAccountNumber());
         System.out.println(rudra.getBalance());
-//        System.out.println(User.count);
-        Accounts.getCounter();
+        System.out.println(rudra1.getBalance());
 
+        rudra2.Credit(5000);
+        System.out.println(rudra2.getBalance());
+//        System.out.println(User.count);
+        Accounts.TotalAccounts();
+
+        Thread t1 = new Thread(rudra);
+        t1.start();
 //        User user1 = (x) ->{System.out.println(x.toLowerCase());};
 //        Predicate<String> predicate = (x) -> x.isEmpty();
 //        Predicate<String> predicate1 = (x) -> x.isBlank();

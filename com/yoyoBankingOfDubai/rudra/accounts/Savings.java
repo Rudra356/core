@@ -5,7 +5,7 @@ public class Savings extends Accounts {
         super.setAccountType("Savings");
         super.Credit(100000);
     }
-    public  Savings(String HolderName, int AccountNumber) {
+    public Savings(String HolderName, int AccountNumber) {
         super.setAccountType("Savings");
         super.setHolderName(HolderName);
         super.setAccountNumber(AccountNumber);

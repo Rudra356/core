@@ -1,6 +1,6 @@
 package com.yoyoBankingOfDubai.rudra.accounts;
 
-public class Accounts {
+public class Accounts implements  Runnable{
     private static long counter =0;
     private String HolderName;
     private int AccountNumber;
@@ -22,7 +22,7 @@ public class Accounts {
         counter++;
     }
 
-    public static void getCounter(){
+    public static void TotalAccounts(){
         System.out.println(counter);
     }
     public String getHolderName() {
@@ -66,5 +66,17 @@ public class Accounts {
 
     public void setAccountType(String accountType) {
         this.AccountType = accountType;
+    }
+
+
+    @Override
+    public void run() {
+        try {
+            Thread.sleep(1000);
+            Balance-=100;
+            System.out.println(Balance);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
