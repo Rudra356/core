@@ -4,7 +4,8 @@ import com.yoyoBankingOfDubai.rudra.accounts.Accounts;
 import com.yoyoBankingOfDubai.rudra.accounts.Savings;
 import com.yoyoBankingOfDubai.rudra.users.User;
 
-import java.util.Locale;
+import java.util.function.Predicate;
+
 
 public class mainrunner {
 
@@ -15,8 +16,14 @@ public class mainrunner {
         System.out.println(rudra.getBalance());
         System.out.println(User.count);
 
-        User user1 = (x) -> System.out.println(x.toLowerCase());
-       user1.userID("RTz");
+        User user1 = (x) ->{
+            System.out.println(x.toLowerCase());
+        };
+        Predicate<String> predicate = (x) -> x.isEmpty();
+        Predicate<String> predicate1 = (x) -> x.isBlank();
+        System.out.println(predicate1.or(predicate).negate().test(" "));
+//        System.out.println(predicate.test(" "));
+        user1.userID("RTz");
     }
 
 }
