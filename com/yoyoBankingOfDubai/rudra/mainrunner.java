@@ -2,9 +2,6 @@ package com.yoyoBankingOfDubai.rudra;
 
 import com.yoyoBankingOfDubai.rudra.accounts.Accounts;
 import com.yoyoBankingOfDubai.rudra.accounts.Savings;
-import com.yoyoBankingOfDubai.rudra.users.User;
-
-import java.util.function.Predicate;
 
 
 public class mainrunner {
